@@ -949,7 +949,6 @@ impl Device {
     /// Exposes the raw evdev events without doing synchronization on SYN_DROPPED.
     pub fn events_no_sync(&mut self) -> Result<RawEvents, Error> {
         try!(self.fill_events());
-        /*DEBUG*/println!("RawEvent");
         Ok(RawEvents::new(self))
     }
 
